@@ -1,5 +1,6 @@
 # Create instagram account by mobile api
-Updated method to register Instagram accounts all automatically, using Instagram mobile API
+Updated method to register Instagram accounts all automatically, using Instagram mobile API<br>
+
 
 
 # Features
@@ -10,9 +11,13 @@ Updated method to register Instagram accounts all automatically, using Instagram
 &#x2022; You are able to choose format of the cookie (`IAM`  | `instagrapi`)<br><br>
 &#x2022; You can define which instagram user to be followed by created accounts<br><br><br>
 
-Basic usage<br>
+### Basic usage<br>
 ```
 python reg.py
 ```
 
+
+we use our Private Instagram API in this script , it needed only 2 api request to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
 ![image](https://user-images.githubusercontent.com/41697758/207024631-6af6bdb1-b6bc-4597-9674-eb89a1f70e85.png)[  Telegram Support](https://imwhodifferent.t.me)
+
+
