@@ -12,6 +12,15 @@ Updated method to register Instagram accounts all automatically, using Instagram
 &#x2022; You can define which instagram user to be followed by created accounts<br><br>
 &#x2022; ...<br><br><br>
 
+
+### Requirement<br>
+&#x2022;SMS API KEY<br>
+&#x2022;Proxy<br><br>
+
+Put your sms api key in `config.txt `<br>
+put your proxy list in `proxies.txt` or enter it in the script if you want to use proxy_url<br><br><br>
+
+
 ### Basic usage<br>
 ```
 python reg.py
