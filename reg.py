@@ -66,7 +66,7 @@ for p in range(try_for_account) :
     time.sleep(5)
     if what_api == '2':
         number = sa.getNumber(service='ig', operator=operator_, country=country_, verification="false")
-        print('\n' + number)
+        print('\n' + str(number))
     elif what_api == '1' :
         number_text = requests.get(get_number_url).text
         print('\n' + number_text)
@@ -92,7 +92,8 @@ for p in range(try_for_account) :
         username5 = username + username[:4] + str(random.randint(1990, 2008)) +  '_' + random.choice(string.ascii_letters).lower() + random.choice(string.ascii_letters).lower()
         username6 = username + username[:4] + random.choice(string.ascii_letters).lower() + random.choice(string.ascii_letters).lower() + random.choice(string.ascii_letters).lower() + str(random.randint(985, 999))
         username = random.choice([username1, username2, username3, username4, username5, username6])
-        print(username)
+        
+        (username)
         
         
         sms_has_sent = False
