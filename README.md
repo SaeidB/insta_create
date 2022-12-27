@@ -1,6 +1,7 @@
 # Create instagram account by mobile api
-Updated method to register Instagram accounts all automatically, using Instagram mobile API<br>
-
+Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
+you can also **directly** use our API https://braindeepjet.ga or use our script below<br><br>
+**Do you like this project? Support it by donating**
 
 
 # Features
