@@ -1,7 +1,7 @@
 import requests, json, time, random, string
 from smsactivate.api import SMSActivateAPI
 
-token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'  # your token from our api http://braindeepjet.ga
+token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'  # get your token from https://imwhodifferent.t.me/
 
 
 proxy_type = input('proxy_type :   1:proxy_list  2:proxy_url ?')
