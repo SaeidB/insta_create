@@ -31,7 +31,7 @@ python reg.py
 
 
 We use our **Private Instagram API** in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br>
-You can use that API to create accounts in a programmatic solution, instead of using this script :<br>
+You can use that API to create accounts in a programmatic solution , instead of using this script :<br>
 [braindeepjet.ga](https://braindeepjet.ga)<br><br>
 ![image](https://user-images.githubusercontent.com/41697758/207024631-6af6bdb1-b6bc-4597-9674-eb89a1f70e85.png)[  Telegram Support](https://imwhodifferent.t.me)
 
