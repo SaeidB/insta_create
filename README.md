@@ -38,5 +38,6 @@ You can use that API to create accounts in a programmatic solution , instead of 
 
 <br><br>
 
-[![Stargazers repo roster for @SaeidB/insta_create](https://reporoster.com/stars/SaeidB/insta_create)](https://github.com/SaeidB/insta_create/stargazers)<br>
-[![Forkers repo roster for @SaeidB/insta_create](https://reporoster.com/forks/SaeidB/insta_create)](https://github.com/SaeidB/insta_create/network/members)
+[![Stargazers repo roster for @SaeidB/insta_create](https://reporoster.com/stars/notext/SaeidB/insta_create)](https://github.com/SaeidB/insta_create/stargazers)
+<br>
+[![Forkers repo roster for @SaeidB/insta_create](https://reporoster.com/forks/notext/SaeidB/insta_create)](https://github.com/SaeidB/insta_create/network/members)
