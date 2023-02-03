@@ -36,4 +36,8 @@ You can use that API to create accounts in a programmatic solution , instead of 
 [braindeepjet.ga](https://braindeepjet.ga)<br><br>
 ![image](https://user-images.githubusercontent.com/41697758/207024631-6af6bdb1-b6bc-4597-9674-eb89a1f70e85.png)[  Telegram Support](https://imwhodifferent.t.me)
 
+<br><br>
+
+[![Stargazers repo roster for @SaeidB/insta_create](https://reporoster.com/stars/SaeidB/insta_create)](https://github.com/SaeidB/insta_create/stargazers)
+
 
