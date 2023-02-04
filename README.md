@@ -27,8 +27,8 @@ put your proxy list in `proxies.txt` or enter it in the script if you want to us
 
 ### Basic usage<br>
 ```
-python -m pip install smsactivate
-python reg.py
+$ python -m pip install smsactivate
+$ python reg.py
 ```
 
 
