@@ -1,5 +1,5 @@
 # Create instagram account by mobile api
-upgraded to :  256.0.0.18.105 | 407843021<br><br>
+<br><br>**upgraded to :  256.0.0.18.105 | 407843021**<br><br>
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
 you can also **directly** use our API https://braindeepjet.ga or use our script below<br><br><br>
 **Do you like this project? Support it by donating**<br><br>
