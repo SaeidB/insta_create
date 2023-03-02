@@ -31,7 +31,11 @@ put your proxy list in `proxies.txt` or enter it in the script if you want to us
 $ python -m pip install smsactivate
 $ python reg.py
 ```
-
+### Or<br>
+if you have smshub and rola-ip : <br>
+```
+$ python reg_smshub_rola_ip.py
+```
 
 We use our **Private Instagram API** in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
 [braindeepjet.ga](https://braindeepjet.ga)<br><br>
