@@ -7,8 +7,8 @@ api_token =  ''        # https://braindeepjet.ga/
 smshub_token = ''      # https://smshub.org/en/main
 rola_proxy_token = ''  # https://www.rola-ip.co/      
 
-
 countries = {'15':'pl', '129':'gr', '174':'my'}
+
 this_time_country = str(random.choice(list(countries.keys())))
 this_time_proxy = random.choice([countries[this_time_country] , 'us'])
 print(f'###  country : {this_time_country}  ,  proxy : {this_time_proxy}')
