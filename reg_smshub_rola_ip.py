@@ -3,7 +3,7 @@ import requests, time, json, random, string, re
 alll = string.ascii_letters + string.digits
 session_name = "".join(random.sample(alll,random.randint(12, 12)))
 
-api_token =  ''        # https://braindeepjet.ga
+api_token =  ''        # https://braindeepjet.ga/
 smshub_token = ''      # https://smshub.org/en/main
 rola_proxy_token = ''  # https://www.rola-ip.co/      
 
