@@ -158,7 +158,7 @@ for att in range(how_many) :
             t = 0
             acw = True
             while acw :
-                if t >= 80 :
+                if t >= 120 :
                     print(f'###  unsuccessfull attempt : {try_to_getstatus(first_attempt["session_code"])}')
                     acw = False
                 time.sleep(1)
