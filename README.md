@@ -10,7 +10,7 @@ you can also **directly** use our API https://braindeepjet.ga or use our script 
 &#x2022; Usdt : 0x7c2406c853156Bb96362eA64f5625e2F79E5fB70
 
 # Features
-&#x2022; Android App API<br><br>
+&#x2022; Android App API 256.0.0.18.105 | 407843021 <br><br>
 &#x2022; Automatically generate `usernames`<br><br>
 &#x2022; Supported both proxy type (`proxy list` | `proxy url + rotate url`)<br><br>
 &#x2022; You are able to choose how many accounts to create by 1 phone number<br><br>
