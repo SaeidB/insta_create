@@ -120,8 +120,12 @@ for att in range(how_many) :
 
     if att == 0 :
         first_attempt = try_to_create(usern, get_proxy())
-        a_number = first_attempt["created_number"]
-        a_accesscode = first_attempt["created_number_accesscode"]
+        try :
+            a_number = first_attempt["created_number"]
+            a_accesscode = first_attempt["created_number_accesscode"]
+        except :
+            print('error :  maybe no number available  ,  try again after minutes')
+            time.sleep(555555)
     else :
         first_attempt = try_to_create_fixed_number(a_number, a_accesscode, usern, get_proxy())
 
