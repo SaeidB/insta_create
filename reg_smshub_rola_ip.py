@@ -10,7 +10,7 @@ rola_proxy_token = ''  # https://www.rola-ip.co/
 countries = {'15':'pl', '129':'gr'}
 
 this_time_country = str(random.choice(list(countries.keys())))
-this_time_proxy = random.choice([countries[this_time_country] , 'us'])
+this_time_proxy = random.choice([countries[this_time_country]])
 print(f'###  country : {this_time_country}  ,  proxy : {this_time_proxy}')
 time.sleep(2)
 
