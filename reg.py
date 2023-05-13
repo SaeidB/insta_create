@@ -1,18 +1,39 @@
 import requests, json, time, random, string
 from smsactivate.api import SMSActivateAPI
 
-token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'  # get your token from https://braindeepjet.ga/  or  https://imwhodifferent.t.me/
+token = input('[*] Enter your braindeepjet api : (Enter L if you want to load it from previous config) :')  # get your token from https://braindeepjet.ga/  or  https://imwhodifferent.t.me/      |   token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'
+if token == 'L' :
+    try :
+        with open('api_cache.txt') as b_api :
+            b_api_lines = b_api.readlines()
+            for line in b_api_lines :
+                if 'b_api' in line :
+                    token = line.strip().split('=')[1]
+            print(f'### sms token : {token}')
+            time.sleep(2)
+    except FileNotFoundError :
+        time.sleep(2)
+        token = input('[*] not found . Enter your braindeepjet api manually : ')
+
+        with open('api_cache.txt', 'w') as new_api :
+            new_api.write(f'b_api={token}')
+            new_api.close()
+
+else :
+    with open('api_cache.txt', 'w') as new_api :
+        new_api.write(f'b_api={token}')
+        new_api.close()
 
 
-proxy_type = input('proxy_type :   1:proxy_list  2:proxy_url ?')
+proxy_type = input('[*] proxy_type :   1:proxy_list  2:proxy_url ?')
 if proxy_type == '2' :
-    proxy_typy2_url = input('Enter proxy url : ')
-    proxy_type2_reset = input('Enter proxy \"switch ip\" url : ')
+    proxy_typy2_url = input('[*] Enter proxy url : ')
+    proxy_type2_reset = input('[*] Enter proxy \"switch ip\" url : ')
     
-acc_by_one_number = input('how many account to create by one phone_number ? : ')
-what_api = input('choose your sms api :   1 - smshub    2 - sms-activate : ')
+acc_by_one_number = input('[*] how many account to create by one phone_number ? : ')
+what_api = input('[*] choose your sms api :   1 - smshub    2 - sms-activate : ')
 if what_api == '2' :
-    sa = SMSActivateAPI(input('Enter SMS-Activate api : '))
+    sa = SMSActivateAPI(input('[*] Enter SMS-Activate api : '))
     sa.debug_mode = True
 elif what_api == '1' :
     pass
@@ -32,8 +53,8 @@ except :
         
         
 
-country_ = int(input('Enter code of country to create number(greece = 129) :'))
-operator_ = input('Enter operator (one of greece operator = q):')
+country_ = int(input('[*] Enter code of country to create number(greece = 129) :'))
+operator_ = input('[*] Enter operator (one of greece operator = q):')
 
 if what_api == '1' :
     get_number_url = f'https://smshub.org/stubs/handler_api.php?api_key={smstoken}&action=getNumber&service=ig&operator={operator_}&country={country_}'
