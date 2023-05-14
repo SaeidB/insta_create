@@ -204,15 +204,19 @@ while True :
             first_attempt = try_to_create_fixed_number(a_number, a_accesscode, usern, get_proxy())
 
         print(first_attempt)
+        sms_submited = False
+        
         if type(first_attempt) == dict :
             timer = 0
             asew=True
             is_status_eight = False
             while asew :
                 if timer >= 55 :
-                    print(sms_status_eight(first_attempt["created_number_accesscode"]))
+                    if att == 0 :
+                        print(sms_status_eight(first_attempt["created_number_accesscode"]))
+                        is_status_eight = True
                     asew = False
-                    is_status_eight = True
+                    
                 print('###  waiting for sms ...')
                 time.sleep(2)
                 timer += 2
@@ -227,8 +231,6 @@ while True :
                     print(f'###  creating account ...')
                 else :
                     pass
-            if is_status_eight :
-                break        
 
         else :
             sms_status_eight(first_attempt[2])
