@@ -1,111 +1,188 @@
-import requests, json, time, random, string
-from smsactivate.api import SMSActivateAPI
+import requests, time, json, random, string, re
 
-token = input('[*] Enter your braindeepjet api : (Enter L if you want to load it from previous config) :')  # get your token from https://braindeepjet.ga/  or  https://imwhodifferent.t.me/      |   token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'
-if token == 'L' :
+alll = string.ascii_letters + string.digits
+session_name = "".join(random.sample(alll,random.randint(12, 12)))
+
+api_token = input('[*] Enter your braindeepjet api : (Enter L if you want to load it from previous config) : ')  # get your token from https://braindeepjet.ga/  or  https://imwhodifferent.t.me/      |   api_token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'
+
+if (api_token == 'L') or (api_token == 'l'):
     try :
         with open('api_cache.txt') as b_api :
             b_api_lines = b_api.readlines()
             for line in b_api_lines :
                 if 'b_api' in line :
-                    token = line.strip().split('=')[1]
-            print(f'### sms token : {token}')
+                    api_token = line.strip().split('=')[1]
+            print(f'###token : {api_token}')
             time.sleep(2)
     except FileNotFoundError :
         time.sleep(2)
-        token = input('[*] not found . Enter your braindeepjet api manually : ')
+        api_token = input('[*] not found . Enter your braindeepjet api manually : ')
 
         with open('api_cache.txt', 'w') as new_api :
-            new_api.write(f'b_api={token}')
+            new_api.write(f'b_api={api_token}')
             new_api.close()
 
 else :
     with open('api_cache.txt', 'w') as new_api :
-        new_api.write(f'b_api={token}')
+        new_api.write(f'b_api={api_token}')
         new_api.close()
+        
+rola_proxy_token = input('[*] Enter the proxy (http://ip:port) : ')
+rola_proxy_rotate = input('[*] Enter the url for rotate proxy : ')
 
 
-proxy_type = input('[*] proxy_type :   1:proxy_list  2:proxy_url ?')
-if proxy_type == '2' :
-    proxy_typy2_url = input('[*] Enter proxy url : ')
-    proxy_type2_reset = input('[*] Enter proxy \"switch ip\" url : ')
-    
-acc_by_one_number = input('[*] how many account to create by one phone_number ? : ')
-what_api = input('[*] choose your sms api :   1 - smshub    2 - sms-activate : ')
-if what_api == '2' :
-    sa = SMSActivateAPI(input('[*] Enter SMS-Activate api : '))
-    sa.debug_mode = True
-elif what_api == '1' :
-    pass
-    
+
+this_time_country = int(input('[*] Enter code of country to create number(greece = 129) : '))
+operator_ = input('[*] Enter operator (if you want random operator , enter \'any\'): ')
+
 try :
     with open('config.txt') as config :
         config_lines = config.readlines()
         for line in config_lines :
             if 'smstoken' in line :
-                smstoken = line.strip().split('=')[1]
-        print(f'### sms token : {smstoken}')
+                smshub_token = line.strip().split('=')[1]
+        print(f'### sms token : {smshub_token}')
         time.sleep(2)
 except :
     time.sleep(2)
     print('\n### put your sms token in config file in this format :   smstoken=exampletoken')
     time.sleep(500000)
-        
-        
 
-country_ = int(input('[*] Enter code of country to create number(greece = 129) :'))
-operator_ = input('[*] Enter operator (one of greece operator = q):')
+sms_api_type = input('select your sms_api  |  1-sms-activate  -  2-smshub : ')
+if sms_api_type == '1' :
+    from smsactivate.api import SMSActivateAPI
+    sa = SMSActivateAPI(smshub_token)
+    sa.debug_mode = True
 
-if what_api == '1' :
-    get_number_url = f'https://smshub.org/stubs/handler_api.php?api_key={smstoken}&action=getNumber&service=ig&operator={operator_}&country={country_}'
-    get_status_url = f'https://smshub.org/stubs/handler_api.php?api_key={smstoken}&action=getStatus&id='
-    
+time.sleep(2)
 
-
-
-
-
-usernames = list(filter(None, open('usernames.txt').read().strip().split('\n')))
-proxies = list(filter(None, open('proxies.txt').read().strip().split('\n')))
-
-if proxy_type == '1' :
-    if int(len(proxies)/int(acc_by_one_number)) < 1 :
-        time.sleep(2)
-        print(f'\nput at last {acc_by_one_number} proxy in proxies.txt')
-        time.sleep(500000)
-    
-if proxy_type == '1' :
-    try_for_account = int(len(proxies)/int(acc_by_one_number))
-elif proxy_type == '2' :
-    try_for_account = 10000
-    
-for p in range(try_for_account) :
-
-
-
-    print('\ncreating new number ...')
-    time.sleep(5)
-    if what_api == '2':
-        number = sa.getNumber(service='ig', operator=operator_, country=country_, verification="false")
-        print('\n' + str(number))
-    elif what_api == '1' :
-        number_text = requests.get(get_number_url).text
-        print('\n' + number_text)
-        
-    for t in range(int(acc_by_one_number)) :
+def sms_get_number(country, operator) :
+    if sms_api_type == '2' :
         try :
-            if continue_with_on_num == False :
-                continue_with_on_num = True
-                break
+            request_number = requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smshub_token}&action=getNumber&service=ig&operator={operator}&country={country}')
+            if 'ACCESS_NUMBER:' in request_number.text :
+                return {'number':request_number.text.split(':')[2], 'access_code':request_number.text.split(':')[1]}
+            else :
+                return request_number.text
         except :
-            pass
-        if proxy_type == '1' :
-            proxy = proxies[t]
-        elif proxy_type == '2' :
-            requests.get(proxy_type2_reset)
-            proxy = proxy_typy2_url
-            
-        username = random.choice(usernames).lower()
+            return False
+    else :
+        try :
+            request_number = sa.getNumber(service='ig', operator=operator, country=country, verification="false")
+            if request_number.get('phone') != None :
+                return {'number':request_number.get('phone'), 'access_code':request_number.get('activation_id')}
+            else :
+                return str(request_number)
+        except Exception as e:
+            print(e)
+            return False
+
+def sms_status_three(access_code):
+    if sms_api_type == '2' :
+        try :
+            return requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smshub_token}&action=setStatus&status=3&id={access_code}').text
+        except :
+            return False
+    else :
+        try :
+            return sa.setStatus(id=access_code, status=3)
+        except :
+            return False
+
+def sms_status_eight(access_code):
+    if sms_api_type == '2' :
+        try :
+            return requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smshub_token}&action=setStatus&status=8&id={access_code}').text
+        except :
+            return False
+    else :
+        try :
+            return sa.setStatus(id=access_code, status=8)
+        except :
+            return False
+
+def sms_get_status(access_code) :
+    if sms_api_type == '2' :
+        try :
+            return requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smshub_token}&action=getStatus&id={access_code}').text
+        except :
+            return False
+    else :
+        try :
+            return sa.getStatus(access_code)
+        except :
+            return False
+
+    
+def get_proxy() :
+    requests.get(rola_proxy_rotate)
+    return rola_proxy_token
+
+
+def try_to_create(username123, proxy123) :
+    timer2 = 0
+    ase=True
+    while ase :
+        timer2 += 1.5
+        time.sleep(1.5)
+        print('\n###  creating number ...')
+        try_to_create_number = sms_get_number(this_time_country, 'any')
+        if type(try_to_create_number) == dict :
+            created_number = try_to_create_number['number']
+            created_number_accesscode = try_to_create_number['access_code']
+            ase = False
+        else :
+            fake_accesscode = 55555555
+            print(try_to_create_number)
+            return (False, try_to_create_number, fake_accesscode)
+        if timer2 > 20 :
+            fake_accesscode = 55555555
+            return (False, try_to_create_number, fake_accesscode)
+    try :
+        create_request = requests.get(f'https://braindeepjet.ga/create_account?token={api_token}&phone_number={created_number}&proxy={proxy123}&username={username123}')
+        if 'started creating account'  in create_request.text :
+            return {'status':'True', 'session_code': json.loads(create_request.text.strip())['session_code'], 'created_number':created_number, 'created_number_accesscode':created_number_accesscode}
+        else :
+            return (create_request.text, created_number, created_number_accesscode)
+    except Exception as e :
+        print(e)
+        return (False, created_number, created_number_accesscode)
+
+
+def try_to_create_fixed_number(created_number, created_number_accesscode, username123, proxy123) :
+    print('\n###  creating another number ...')
+    try :
+        create_request = requests.get(f'https://braindeepjet.ga/create_account?token={api_token}&phone_number={created_number}&proxy={proxy123}&username={username123}')
+        if 'started creating account'  in create_request.text :
+            return {'status':'True', 'session_code': json.loads(create_request.text.strip())['session_code'], 'created_number':created_number, 'created_number_accesscode':created_number_accesscode}
+        else :
+            return (create_request.text, created_number, created_number_accesscode)
+    except Exception as e :
+        print(e)
+        return (False, created_number, created_number_accesscode)
+
+
+def try_to_submit_sms(session_code, sms) :
+    try :
+        return requests.get(f'https://braindeepjet.ga/submit_sms?token={api_token}&session_code={session_code}&sms={sms}').text
+    except :
+        return False
+
+def try_to_getstatus(session_code) :
+    try :
+        return requests.get(f'https://braindeepjet.ga/get_status?token={api_token}&session_code={session_code}').text
+    except :
+        return False
+
+    
+
+usernames_t = list(filter(None, open('usernames.txt').read().strip().split('\n')))
+
+how_many = int(input('[*] how many account do you want to be created by 1 single number ? (use maximum 3_4 because instagram will be sensitive to you : '))
+
+while True :
+    for att in range(how_many) :
+        username = random.choice(usernames_t).lower()
         username1 = username + username[-1] + username[-1] + str(random.randint(10, 95)) + username[:3]
         username2 = username + '_' + username[-4:] + str(random.randint(100, 950))
         username3 = username + username[-4:] + '_' + str(random.randint(1990, 2008)) + random.choice(string.ascii_letters).lower() + random.choice(string.ascii_letters).lower()
@@ -113,116 +190,80 @@ for p in range(try_for_account) :
         username5 = username + username[:4] + str(random.randint(1990, 2008)) +  '_' + random.choice(string.ascii_letters).lower() + random.choice(string.ascii_letters).lower()
         username6 = username + username[:4] + random.choice(string.ascii_letters).lower() + random.choice(string.ascii_letters).lower() + random.choice(string.ascii_letters).lower() + str(random.randint(985, 999))
         username = random.choice([username1, username2, username3, username4, username5, username6])
-        
-        (username)
-        
-        
-        sms_has_sent = False
-        if ('http' in proxy) == False :
-            this_proxy = 'http://' + proxy
-        else :
-            this_proxy = proxy
-            
-            
-        phone_created_time = time.time()
-        if what_api == '2' :
-            try :
-                phone_number = number['phone']
-            except :
-                print(number)
-                break
-        else :
-            try :
-                number = number_text.split(':')[2]
-                activation_code = number_text.split(':')[1]
-                phone_number = number
-            except :
-                print(number_text)
-                break
-        
-        respond_1 = requests.get(f'https://braindeepjet.ga/create_account?token={token}&phone_number={phone_number}&proxy={this_proxy}&username={username}').json()
-        try :
-            
-            session_code = respond_1['session_code'] 
-        except :
-            
-            print(respond_1)
-            if what_api == '2':
-                sa.setStatus(id=number['activation_id'], status=8)
-            else :
-                requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smstoken}&action=setStatus&status=8&id={activation_code}')
-            print('number set status : 8')
-            continue
-        
+        usern = username
 
-        print(f'session_code : {session_code}')
-        time.sleep(2)
-        print(f'getting registaration data ...')
-        if respond_1.get('message') == 'started creating account' :
-            mloop = True
-            while mloop :
-                
-                time.sleep(7)
-                get_status = requests.get(f'https://braindeepjet.ga/get_status?token={token}&session_code={session_code}').text
-                if get_status == 'submit sms code':
-                    check_sms = True
-                    while check_sms :
-                        print('checking sms api for code...')
-                        if time.time() - phone_created_time > 60 :
-
-                            print('### refused phone number .')
-                            if what_api == '2' :
-                                sa.setStatus(id=number['activation_id'], status=8)
-                            else :
-                                requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smstoken}&action=setStatus&status=8&id={activation_code}')
-                            check_sms = False
-                            mloop = False
-                            continue_with_on_num = False
-                        else :
-                            time.sleep(3)
-                            if what_api == '2' :
-                                status = sa.getStatus(number['activation_id'])
-                            elif what_api == '1' :
-                                status = requests.get(get_status_url + activation_code).text
-                            if 'STATUS_OK' in status :
-                                sms = status.split(':')[-1]
-                                print(f'received sms from instagram : {sms}')
-                                time.sleep(2)
-                                print('creating ...')
-                                send_sms = requests.get(f'https://braindeepjet.ga/submit_sms?token={token}&session_code={session_code}&sms={sms}')
-                                sms_has_sent = True
-                                check_sms = False
-                                mloop = False
-                            else :
-                                pass
-                else :
-                    if ('creating account...' in get_status) == False :
-                        print(get_status)
-                        print('### refused phone number X')
-                        if what_api == '2' :
-                            sa.setStatus(id=number['activation_id'], status=8)
-                        else :
-                            requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smstoken}&action=setStatus&status=8&id={activation_code}')
-                                
-                        continue_with_on_num = False  
-                        mloop = False
+        if att == 0 :
+            first_attempt = try_to_create(usern, get_proxy())
+            try :
+                a_number = first_attempt["created_number"]
+                a_accesscode = first_attempt["created_number_accesscode"]
+            except :
+                print('error :  maybe no number available  ,  try again after minutes')
+                time.sleep(555555)
         else :
-            print(respond_1)
-                
-        if sms_has_sent == True :
-            checking_result = time.time()
-            while True :
+            first_attempt = try_to_create_fixed_number(a_number, a_accesscode, usern, get_proxy())
+
+        print(first_attempt)
+        if type(first_attempt) == dict :
+            timer = 0
+            asew=True
+            is_status_eight = False
+            while asew :
+                if timer >= 55 :
+                    print(sms_status_eight(first_attempt["created_number_accesscode"]))
+                    asew = False
+                    is_status_eight = True
+                print('###  waiting for sms ...')
                 time.sleep(2)
-                if time.time() - checking_result  > 60 :
-                    break
-                if '|||' in requests.get(f'https://braindeepjet.ga/get_status?token={token}&session_code={session_code}').text :
-                    accounts_file = open(f'accounts.txt', 'a')
-                    accounts_file.write(requests.get(f'https://braindeepjet.ga/get_status?token={token}&session_code={session_code}').text + '\n')
-                    accounts_file.close()
-                    print('### account created\n')
-                    if what_api == '2' :
-                        sa.setStatus(id=number['activation_id'], status=3)
+                timer += 2
+                smsget = sms_get_status(first_attempt['created_number_accesscode'])
+                if ('STATUS_OK' in smsget) and (is_status_eight == False):
+                    print(sms_status_three(first_attempt['created_number_accesscode']))
+                    try_to_submit_sms(first_attempt['session_code'], smsget.split(':')[1])
+                    sms_submited = True
+                    asew = False
+                    print(f'###  sms submited : {smsget.split(":")[1]}')
+                    time.sleep(1.5)
+                    print(f'###  creating account ...')
+                else :
+                    pass
+            if is_status_eight :
+                break        
+
+        else :
+            sms_status_eight(first_attempt[2])
+            break
+        try :
+            if sms_submited == True :
+                t = 0
+                acw = True
+                while acw :
+                    if t >= 120 :
+                        print(f'###  unsuccessfull attempt : {try_to_getstatus(first_attempt["session_code"])}')
+                        acw = False
+                    time.sleep(1)
+                    t += 1
+                    gg = try_to_getstatus(first_attempt['session_code'])
+                    if t == 6 :
+                        print('### getting registration data ...')
+                    if t == 10 :
+                        print('### sending final requests ...')
+                    if '||' in gg :
+                        print(gg + '\n')
+                        acw = False
+                        accounts_file = open(f'accounts_{session_name}.txt', 'a')
+                        accounts_file.write(gg + '\n')
+                        accounts_file.close()
+
+                        accounts_file_detail = open(f'details0_{session_name}.txt', 'a')
+                        uns = re.findall('(.*?)\|', gg)[0].split(':')[0]
+                        ups = re.findall('(.*?)\|', gg)[0].split(':')[1]
+
+                        accounts_file_detail.write(f'{uns},{ups},{a_number}\n')
+                        accounts_file_detail.close()
+
                     else :
-                        requests.get(f'https://smshub.org/stubs/handler_api.php?api_key={smstoken}&action=setStatus&status=3&id={activation_code}')
-                    break
-        
+                        pass
+                    
+        except :
+            pass
