@@ -26,9 +26,16 @@ else :
     with open('api_cache.txt', 'w') as new_api :
         new_api.write(f'b_api={api_token}')
         new_api.close()
-        
-rola_proxy_token = input('[*] Enter the proxy (http://ip:port) : ')
-rola_proxy_rotate = input('[*] Enter the url for rotate proxy : ')
+
+pr_type = input('[*] Do you want to use 1-proxy + rotate url   2-proxy list : ')
+if pr_type == '1' :
+    rola_proxy_token = input('[*] Enter the proxy (http://ip:port) : ')
+    rola_proxy_rotate = input('[*] Enter the url for rotate proxy : ')
+elif pr_type == '2' :
+    proxies_file = open('proxies.txt', 'r')
+    proxies_list = proxies_file.readlines()
+    pr_index = 0
+
 
 
 
@@ -115,8 +122,13 @@ def sms_get_status(access_code) :
 
     
 def get_proxy() :
-    requests.get(rola_proxy_rotate)
-    return rola_proxy_token
+    if pr_type == '1' :
+        requests.get(rola_proxy_rotate)
+        return rola_proxy_token
+    else :
+        pr = proxies_list[pr_index].strip('\n')
+        pr_index += 1
+        return pr
 
 
 def try_to_create(username123, proxy123) :
@@ -253,16 +265,20 @@ while True :
                     if '||' in gg :
                         print(gg + '\n')
                         acw = False
-                        accounts_file = open(f'accounts_{session_name}.txt', 'a')
+                        accounts_file = open(f'accounts.txt', 'a')
                         accounts_file.write(gg + '\n')
                         accounts_file.close()
+                        
+                        #accounts_file = open(f'accounts_{session_name}.txt', 'a')
+                        #accounts_file.write(gg + '\n')
+                        #accounts_file.close()
 
-                        accounts_file_detail = open(f'details0_{session_name}.txt', 'a')
+                        #accounts_file_detail = open(f'details0_{session_name}.txt', 'a')
                         uns = re.findall('(.*?)\|', gg)[0].split(':')[0]
                         ups = re.findall('(.*?)\|', gg)[0].split(':')[1]
 
-                        accounts_file_detail.write(f'{uns},{ups},{a_number}\n')
-                        accounts_file_detail.close()
+                        #accounts_file_detail.write(f'{uns},{ups},{a_number}\n')
+                        #accounts_file_detail.close()
 
                     else :
                         pass
