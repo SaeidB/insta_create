@@ -32,9 +32,11 @@ if pr_type == '1' :
     rola_proxy_token = input('[*] Enter the proxy (http://ip:port) : ')
     rola_proxy_rotate = input('[*] Enter the url for rotate proxy : ')
 elif pr_type == '2' :
+    print('[*] proxy list selected')
     proxies_file = open('proxies.txt', 'r')
     proxies_list = proxies_file.readlines()
     pr_index = 0
+
 
 
 
@@ -126,6 +128,7 @@ def get_proxy() :
         requests.get(rola_proxy_rotate)
         return rola_proxy_token
     else :
+        global pr_index
         pr = proxies_list[pr_index].strip('\n')
         pr_index += 1
         return pr
