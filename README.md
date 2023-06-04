@@ -2,7 +2,7 @@
 <br><br>**upgraded to :  283.0.0.20.105**<br><br>
 **latest tests : 3 Jun 2023**  ✔️<br><br> 
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
-you can also **directly** use our API https://braindeepjet.ga or use our script below<br><br><br>
+you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
 
 
@@ -46,7 +46,7 @@ $ python reg_smshub_rola_ip.py
 ```
 
 We use our **Private Instagram API** in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
-[braindeepjet.ga](https://braindeepjet.ga)<br><br>
+[braindeepjet.online](https://braindeepjet.online)<br><br>
 ![image](https://user-images.githubusercontent.com/41697758/207024631-6af6bdb1-b6bc-4597-9674-eb89a1f70e85.png)[  Telegram Support](https://imwhodifferent.t.me)
 
 <br><br>
