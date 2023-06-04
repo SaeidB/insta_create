@@ -3,7 +3,7 @@ import requests, time, json, random, string, re
 alll = string.ascii_letters + string.digits
 session_name = "".join(random.sample(alll,random.randint(12, 12)))
 
-api_token = input('[*] Enter your braindeepjet api : (Enter L if you want to load it from previous config) : ')  # get your token from https://braindeepjet.ga/  or  https://imwhodifferent.t.me/      |   api_token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'
+api_token = input('[*] Enter your braindeepjet api : (Enter L if you want to load it from previous config) : ')  # get your token from https://braindeepjet.online/  or  https://imwhodifferent.t.me/      |   api_token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'
 
 if (api_token == 'L') or (api_token == 'l'):
     try :
@@ -154,7 +154,7 @@ def try_to_create(username123, proxy123) :
             fake_accesscode = 55555555
             return (False, try_to_create_number, fake_accesscode)
     try :
-        create_request = requests.get(f'https://braindeepjet.ga/create_account?token={api_token}&phone_number={created_number}&proxy={proxy123}&username={username123}')
+        create_request = requests.get(f'https://braindeepjet.online/create_account?token={api_token}&phone_number={created_number}&proxy={proxy123}&username={username123}')
         if 'started creating account'  in create_request.text :
             return {'status':'True', 'session_code': json.loads(create_request.text.strip())['session_code'], 'created_number':created_number, 'created_number_accesscode':created_number_accesscode}
         else :
@@ -167,7 +167,7 @@ def try_to_create(username123, proxy123) :
 def try_to_create_fixed_number(created_number, created_number_accesscode, username123, proxy123) :
     print('\n###  creating another number ...')
     try :
-        create_request = requests.get(f'https://braindeepjet.ga/create_account?token={api_token}&phone_number={created_number}&proxy={proxy123}&username={username123}')
+        create_request = requests.get(f'https://braindeepjet.online/create_account?token={api_token}&phone_number={created_number}&proxy={proxy123}&username={username123}')
         if 'started creating account'  in create_request.text :
             return {'status':'True', 'session_code': json.loads(create_request.text.strip())['session_code'], 'created_number':created_number, 'created_number_accesscode':created_number_accesscode}
         else :
@@ -179,13 +179,13 @@ def try_to_create_fixed_number(created_number, created_number_accesscode, userna
 
 def try_to_submit_sms(session_code, sms) :
     try :
-        return requests.get(f'https://braindeepjet.ga/submit_sms?token={api_token}&session_code={session_code}&sms={sms}').text
+        return requests.get(f'https://braindeepjet.online/submit_sms?token={api_token}&session_code={session_code}&sms={sms}').text
     except :
         return False
 
 def try_to_getstatus(session_code) :
     try :
-        return requests.get(f'https://braindeepjet.ga/get_status?token={api_token}&session_code={session_code}').text
+        return requests.get(f'https://braindeepjet.online/get_status?token={api_token}&session_code={session_code}').text
     except :
         return False
 
