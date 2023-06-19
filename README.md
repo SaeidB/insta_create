@@ -1,6 +1,6 @@
 # Create instagram account by mobile api
 <br><br>**upgraded to :  283.0.0.20.105**<br><br>
-**latest tests : 3 Jun 2023**  ✔️<br><br> 
+**latest tests : 19 Jun 2023**  ✔️<br><br> 
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
 you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
@@ -39,11 +39,7 @@ put your proxy list in `proxies.txt` http://ip:port or enter it in the script if
 $ python -m pip install smsactivate
 $ python reg.py
 ```
-### Or<br>
-if you have smshub and rola-ip : <br>
-```
-$ python reg_smshub_rola_ip.py
-```
+
 
 We use our **Private Instagram API** in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
 [braindeepjet.online](https://braindeepjet.online)<br><br>
