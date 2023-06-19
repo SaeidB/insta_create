@@ -31,7 +31,7 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 Put your sms api key in `config.txt ` .<br>
 put your token in reg.py . Get the token from [here](https://imwhodifferent.t.me)<br>
 put your proxy list in `proxies.txt` http://ip:port or enter it in the script if you want to use proxy_url + rotate_url<br><br>
-- I didn't get sms , how to solve that ? Just change your proxy or country of number <br><br><br>
+- I didn't receive sms , how to solve that ? -change proxy  -change phone number country or operator <br><br><br>
 
 
 ### Basic usage<br>
