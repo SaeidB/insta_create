@@ -11,7 +11,6 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 
 
 &#x2022; Btc : bc1qn03g6zldytg0sq5fgwlry4napphaw44q2v2l2u<br>
-&#x2022; Usdt : 0x7c2406c853156Bb96362eA64f5625e2F79E5fB70<br>
 &#x2022; [Coinbase](https://commerce.coinbase.com/checkout/d07c978f-7981-4b14-ac83-00f069f71e3a)
 
 # Features
