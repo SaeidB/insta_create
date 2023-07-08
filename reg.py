@@ -226,7 +226,7 @@ while True :
             asew=True
             is_status_eight = False
             while asew :
-                if timer >= 55 :
+                if timer >= 250 :
                     if att == 0 :
                         print(sms_status_eight(first_attempt["created_number_accesscode"]))
                         is_status_eight = True
