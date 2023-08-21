@@ -40,8 +40,8 @@ $ python reg.py
 ```
 
 
-We use our **Private Instagram API** in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
-[braindeepjet.online](https://braindeepjet.online)<br><br>
+We use our **Private Instagram API** ( [braindeepjet.online](https://braindeepjet.online) ) in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
+<br><br>
 ![image](https://user-images.githubusercontent.com/41697758/207024631-6af6bdb1-b6bc-4597-9674-eb89a1f70e85.png)[  Telegram Support](https://imwhodifferent.t.me)
 
 <br><br>
