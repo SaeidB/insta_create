@@ -14,13 +14,13 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 &#x2022; [Coinbase](https://commerce.coinbase.com/checkout/d07c978f-7981-4b14-ac83-00f069f71e3a)
 
 # Features
-&#x2022; Android App API 288.0.0.22.66 <br><br>
-&#x2022; Automatically generate `usernames`<br><br>
-&#x2022; Supported both proxy type (`proxy list` | `proxy url + rotate url`)<br><br>
-&#x2022; You are able to choose how many accounts to create by 1 phone number<br><br>
-&#x2022; You are able to choose format of the cookie (`IAM`  | `instagrapi`)<br><br>
-&#x2022; You can define which instagram user to be followed by created accounts<br><br>
-&#x2022; ...<br><br><br>
+- Android App API 288.0.0.22.66 <br>
+- You are able to choose format of the cookie (`IAM`  | `instagrapi`)<br>
+- Supported both proxy type (`proxy list` | `proxy url + rotate url`)<br>
+- You are able to choose how many accounts to create by 1 phone number<br>
+- Automatically generate `usernames`<br>
+- You can define which instagram user to be followed by created accounts<br>
+- ...<br><br><br>
 
 
 # Requirement<br>
@@ -42,7 +42,10 @@ $ python reg.py
 
 We use our **Private Instagram API** ( [braindeepjet.online](https://braindeepjet.online) ) in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
 <br><br>
-![image](https://user-images.githubusercontent.com/41697758/207024631-6af6bdb1-b6bc-4597-9674-eb89a1f70e85.png)[  Telegram Support](https://imwhodifferent.t.me)
+
+![image](https://github.com/SaeidB/insta_create/assets/41697758/0f2a45e2-856d-40d6-9ebe-1026a5b80f64)<br>
+[  Telegram Support](https://imwhodifferent.t.me)<br>
+
 
 <br><br>
 
