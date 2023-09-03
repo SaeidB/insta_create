@@ -129,7 +129,7 @@ def get_proxy() :
         return rola_proxy_token
     else :
         global pr_index
-        pr = proxies_list[pr_index].strip('\n')
+        pr = proxies_list[pr_index - (len(proxies_list) * ((round(pr_index/len(proxies_list)))))].strip('\n')
         pr_index += 1
         return pr
 
