@@ -272,6 +272,12 @@ while True :
                         accounts_file.write(gg + '\n')
                         accounts_file.close()
                         
+                        json_cookie = open(f'{usern}.json', 'a')
+                        try :
+                            json_cookie.write(requests.get(f'https://braindeepjet.online/get_status?token={api_token}&session_code={first_attempt['session_code']}&instagrapi=true').text)
+                        except :
+                            pass
+                        json_cookie.close()
                         #accounts_file = open(f'accounts_{session_name}.txt', 'a')
                         #accounts_file.write(gg + '\n')
                         #accounts_file.close()
