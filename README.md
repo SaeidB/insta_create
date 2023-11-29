@@ -1,6 +1,6 @@
 # Create instagram account by mobile api
-<br><br>**upgraded to :  288.0.0.22.66**<br><br>
-**latest tests : 18 Sep 2023**  ✔️<br><br> 
+<br><br>**upgraded to :  298.0.0.31.110**<br><br>
+**latest tests : 29 Nov 2023**  ✔️<br><br> 
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
 you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
@@ -14,7 +14,7 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 &#x2022; [Coinbase](https://commerce.coinbase.com/checkout/d07c978f-7981-4b14-ac83-00f069f71e3a)
 
 # Features
-- Android App API 288.0.0.22.66 <br>
+- Android App API 298.0.0.31.110 <br>
 - You are able to choose format of the cookie (`IAM`  | `instagrapi`)<br>
 - Supported both proxy type (`proxy list` | `proxy url + rotate url`)<br>
 - You are able to choose how many accounts to create by 1 phone number<br>
