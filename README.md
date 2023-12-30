@@ -1,6 +1,6 @@
 # Create instagram account by mobile api
 <br><br>**upgraded to :  298.0.0.31.110**<br><br>
-**latest tests : 29 Nov 2023**  ✔️<br><br> 
+**latest tests : 30 Dec 2023**  ✔️<br><br> 
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
 you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
