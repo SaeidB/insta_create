@@ -1,6 +1,6 @@
 # Create instagram account by mobile api
 
-If you want to use accounts mostly for **scraping data** , we highly suggest you to use our new service which we built recently on [RapidApi](https://rapidapi.com/imwhodifferent/api/instagram-media-api1) , We use our large pool of proxies and accounts and also we use **AI** to efficiently get data , and we will deliver data to you without any restriction and fast , so you will get rid of managing proxies , challenges , timeout etc . check the plans on [RapidApi](https://rapidapi.com/imwhodifferent/api/instagram-media-api1) and if you need a custom payment method or if you need a custom usage of data , feel free to contact on telegram and we will provide you what you want . ( if you need a huge data usage , we can provide a decent price )
+If you want to use accounts mostly for **scraping data** , we highly suggest you to use our new service which we built recently on [RapidApi](https://rapidapi.com/imwhodifferent/api/instagram-scraper-ai1) , We use our large pool of proxies and accounts and also we use **AI** to efficiently get data , and we will deliver data to you without any restriction and fast , so you will get rid of managing proxies , challenges , timeout etc . check the plans on [RapidApi](https://rapidapi.com/imwhodifferent/api/instagram-scraper-ai1) and if you need a custom payment method or if you need a custom usage of data , feel free to contact on telegram and we will provide you what you want . ( if you need a huge data usage , we can provide a decent price )
 
 
 
