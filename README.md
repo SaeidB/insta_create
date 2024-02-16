@@ -50,8 +50,8 @@ $ python reg.py
 We use our **Private Instagram API** ( [braindeepjet.online](https://braindeepjet.online) ) in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
 <br><br>
 
-![image](https://github.com/SaeidB/insta_create/assets/41697758/0f2a45e2-856d-40d6-9ebe-1026a5b80f64)<br>
-[  Telegram Support](https://imwhodifferent.t.me)<br>
+[![image](https://github.com/SaeidB/insta_create/assets/41697758/0f2a45e2-856d-40d6-9ebe-1026a5b80f64)](https://imwhodifferent.t.me)<br>
+Telegram Support
 
 
 <br><br>
