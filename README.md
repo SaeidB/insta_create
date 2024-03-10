@@ -55,4 +55,5 @@ Telegram Support
 
 
 <br><br>
-
+### Stargazers<br>
+[![Stargazers repo roster for @SaeidB/insta_create](https://reporoster.com/stars/SaeidB/insta_create)](https://github.com/SaeidB/insta_create/stargazers)
