@@ -12,14 +12,6 @@ Updated method to register Instagram accounts all automatically, using Instagram
 you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
 
-
-# Buy me a coffee :coffee:
-
-
-
-
-&#x2022; [Coinbase](https://commerce.coinbase.com/checkout/d07c978f-7981-4b14-ac83-00f069f71e3a)
-
 # Features
 - Android App API 331.0.0.37.90 <br>
 - You are able to choose format of the cookie (`IAM`  | `instagrapi`)<br>
