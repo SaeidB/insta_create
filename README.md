@@ -11,14 +11,14 @@ If you want to use accounts mostly for **scraping data** , we highly suggest you
 [![image](https://github.com/SaeidB/insta_create/assets/41697758/0f2a45e2-856d-40d6-9ebe-1026a5b80f64)](https://imwhodifferent.t.me)<br>
 
 <br><br>
-- **upgraded to :  331.0.0.37.90**<br><br>
-- **latest tests : 3 Jan 2025**  ✔️<br><br> 
+- **upgraded to :  362.0.0.33.241**<br><br>
+- **latest tests : 3 Feb 2025**  ✔️<br><br> 
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
 you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
 
 # Features
-- Android App API 331.0.0.37.90 <br>
+- Android App API 362.0.0.33.241 <br>
 - You are able to choose format of the cookie (`IAM`  | `instagrapi`)<br>
 - Supported both proxy type (`proxy list` | `proxy url + rotate url`)<br>
 - You are able to choose how many accounts to create by 1 phone number<br>
