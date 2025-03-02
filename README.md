@@ -37,12 +37,12 @@ put your proxy list in `proxies.txt` http://ip:port or http://user:pass@ip:port 
 - I didn't receive sms in sms_mode , how to solve that ? -change proxy  -change phone number country or operator <br><br><br>
 
 
-### Basic usage for email_mode<br>
+### Basic usage (email_mode)<br>
 ```
 $ python email_reg.py
 ```
 
-### Basic usage for sms_mode<br>
+### Basic usage (sms_mode)<br>
 ```
 $ python -m pip install smsactivate
 $ python reg.py
