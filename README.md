@@ -32,12 +32,17 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 &#x2022;Proxy<br><br>
 
 Put your email api key in `email_reg.py` .<br>
-put your token in `email_reg.py` . Get the token from [admin](https://imwhodifferent.t.me)<br> or [website](https://braindeepjet.online)
+put your token in `email_reg.py` . Get the token from [admin](https://imwhodifferent.t.me) or [website](https://braindeepjet.online)<br>
 put your proxy list in `proxies.txt` http://ip:port or http://user:pass@ip:port <br><br>
 - I didn't receive sms in sms_mode , how to solve that ? -change proxy  -change phone number country or operator <br><br><br>
 
 
-### Basic usage<br>
+### Basic usage for email_mode<br>
+```
+$ python email_reg.py
+```
+
+### Basic usage for sms_mode<br>
 ```
 $ python -m pip install smsactivate
 $ python reg.py
