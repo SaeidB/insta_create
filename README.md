@@ -28,13 +28,13 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 
 
 # Requirement<br>
-&#x2022;SMS API KEY<br>
+&#x2022;Email API KEY<br>
 &#x2022;Proxy<br><br>
 
-Put your sms api key in `config.txt ` .<br>
-put your token in reg.py . Get the token from [here](https://imwhodifferent.t.me)<br>
-put your proxy list in `proxies.txt` http://ip:port or enter it in the script if you want to use proxy_url + rotate_url<br><br>
-- I didn't receive sms , how to solve that ? -change proxy  -change phone number country or operator <br><br><br>
+Put your email api key in `email_reg.py` .<br>
+put your token in `email_reg.py` . Get the token from [admin](https://imwhodifferent.t.me)<br> or [website](https://braindeepjet.online)
+put your proxy list in `proxies.txt` http://ip:port or http://user:pass@ip:port <br><br>
+- I didn't receive sms in sms_mode , how to solve that ? -change proxy  -change phone number country or operator <br><br><br>
 
 
 ### Basic usage<br>
