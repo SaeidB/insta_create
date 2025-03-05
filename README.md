@@ -34,8 +34,6 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 Put your email api key in `email_reg.py` .<br>
 put your token in `email_reg.py` . Get the token from [admin](https://imwhodifferent.t.me) or [website](https://braindeepjet.online)<br>
 put your proxy list in `proxies.txt` http://ip:port or http://user:pass@ip:port <br><br>
-- I didn't receive sms in sms_mode , how to solve that ? -change proxy  -change phone number country or operator <br><br><br>
-
 
 ### Basic usage (email_mode)<br>
 ```
