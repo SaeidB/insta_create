@@ -40,7 +40,7 @@ put your proxy list in `proxies.txt` http://ip:port or http://user:pass@ip:port 
 $ python email_reg.py
 ```
 
-### Basic usage (sms_mode)(IG limits sms register)<br>
+### Basic usage (sms_mode)(IG has limited sms register)<br>
 ```
 $ python -m pip install smsactivate
 $ python reg.py
