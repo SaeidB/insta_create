@@ -12,7 +12,7 @@ If you want to use accounts mostly for **scraping data** , we highly suggest you
 
 <br><br>
 - **upgraded to :  370.0.0.42.96**<br><br>
-- **latest tests : 26 March 2025**  ✔️<br><br> 
+- **latest tests : 18 May 2025**  ✔️<br><br> 
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
 you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
