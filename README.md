@@ -8,7 +8,6 @@
 - **upgraded to :  370.0.0.42.96**<br><br>
 - **latest tests : 13 Jun 2025**  ✔️<br><br> 
 Updated method to register Instagram accounts all automatically, using Instagram mobile API<br><br>
-you can also **directly** use our API https://braindeepjet.online or use our script below<br><br><br>
 ![ezgif-4-5282554cab](https://user-images.githubusercontent.com/41697758/222406000-affb0231-4ef8-4f04-abf3-1cf3cc403773.gif)
 
 # Features
@@ -32,9 +31,6 @@ $ python -m pip install smsactivate
 $ python reg.py
 ```
 
-
-We use our **Private Instagram API** ( [braindeepjet.online](https://braindeepjet.online) ) in this script to create accounts , it needed only **2 api request** to create account! , generating all params are automatically , such as password , user_agent, uuid and ...<br><br>
-<br><br>
 
 [![image](https://github.com/SaeidB/insta_create/assets/41697758/0f2a45e2-856d-40d6-9ebe-1026a5b80f64)](https://imwhodifferent.t.me)<br>
 Telegram Support
