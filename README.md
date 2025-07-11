@@ -25,14 +25,6 @@ you can also **directly** use our API https://braindeepjet.online or use our scr
 &#x2022;Email API KEY<br>
 &#x2022;Proxy<br><br>
 
-Put your email api key in `email_reg.py` .<br>
-put your token in `email_reg.py` . Get the token from [admin](https://imwhodifferent.t.me) or [website](https://braindeepjet.online)<br>
-put your proxy list in `proxies.txt` http://ip:port or http://user:pass@ip:port <br><br>
-
-### Basic usage (email_mode)<br>
-```
-$ python email_reg.py
-```
 
 ### Basic usage (sms_mode)(IG has limited sms register)<br>
 ```
