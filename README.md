@@ -2,8 +2,6 @@
 
 
 
-[![image](https://github.com/SaeidB/insta_create/assets/41697758/0f2a45e2-856d-40d6-9ebe-1026a5b80f64)](https://imwhodifferent.t.me)<br>
-
 <br><br>
 - **upgraded to :  370.0.0.42.96**<br><br>
 - **latest tests : 13 Jun 2025**  ✔️<br><br> 
