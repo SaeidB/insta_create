@@ -30,10 +30,6 @@ $ python reg.py
 ```
 
 
-[![image](https://github.com/SaeidB/insta_create/assets/41697758/0f2a45e2-856d-40d6-9ebe-1026a5b80f64)](https://imwhodifferent.t.me)<br>
-Telegram Support
-
-
 <br><br>
 # Stargazers<br>
 [![Stargazers repo roster for @SaeidB/insta_create](https://reporoster.com/stars/notext/SaeidB/insta_create)](https://github.com/SaeidB/insta_create/stargazers)
