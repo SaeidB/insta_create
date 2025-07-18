@@ -3,7 +3,7 @@ import requests, time, json, random, string, re
 alll = string.ascii_letters + string.digits
 session_name = "".join(random.sample(alll,random.randint(12, 12)))
 
-api_token = input('[*] Enter your braindeepjet api : (Enter L if you want to load it from previous config) : ')  # get your token from https://braindeepjet.online/  or  https://imwhodifferent.t.me/      |   api_token = 'b0k6UWErDv9e38ewLJjcHEI15e8ZdEdaBVpflnY'
+api_token = input('[*] Enter your api : (Enter L if you want to load it from previous config) : ') 
 
 if (api_token == 'L') or (api_token == 'l'):
     try :
@@ -16,7 +16,7 @@ if (api_token == 'L') or (api_token == 'l'):
             time.sleep(2)
     except FileNotFoundError :
         time.sleep(2)
-        api_token = input('[*] not found . Enter your braindeepjet api manually : ')
+        api_token = input('[*] not found . Enter your api manually : ')
 
         with open('api_cache.txt', 'w') as new_api :
             new_api.write(f'b_api={api_token}')
